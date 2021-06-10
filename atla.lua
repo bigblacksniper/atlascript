@@ -7,6 +7,8 @@ function doFarm()
         while autoFarm == true do
             local args = {[1] = "ProcessKey",[2] = {["Key"] = "E"}}
             remotePath.GameFunction:InvokeServer(unpack(args))
+            local args = {[1] = "ProcessKey",[2] = {["Key"] = "Q"}}
+            remotePath.GameFunction:InvokeServer(unpack(args))
             local args = {[1] = "ProcessKey",[2] = {["AimPos"] = Vector3.new(1658.9489746094, 426.97250366211, -2279.9765625),["Key"] = "J",["ExtraData"] = {}}}
             remotePath.GameFunction:InvokeServer(unpack(args))
             local args = {[1] = "ProcessKey",[2] = {["AimPos"] = Vector3.new(1549.7655029297, 376.28677368164, -2283.1301269531),["Key"] = "X",["ExtraData"] = {}}}
@@ -25,6 +27,8 @@ function doFarm()
             remotePath.GameFunction:InvokeServer(unpack(args))
             local args = {[1] = "ProcessKey",[2] = {["Key"] = "E"}}
             remotePath.GameFunction:InvokeServer(unpack(args))
+            local args = {[1] = "ProcessKey",[2] = {["Key"] = "Q"}}
+            remotePath.GameFunction:InvokeServer(unpack(args))
             wait()
         end
     end)
@@ -42,9 +46,9 @@ local d = w:CreateFolder("Npc TP")
 
 local e = w:CreateFolder("Miscellanous")
 
-b:Toggle("Auto Level",function(bool)
+b:Toggle("Auto Farm",function(bool)
     getgenv().autoFarm = bool
-    print('Auto Level is: ', bool)
+    print('Auto Farm is: ', bool)
     if bool then
         doFarm();
     end
