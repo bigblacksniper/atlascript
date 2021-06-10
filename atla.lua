@@ -42,9 +42,9 @@ local d = w:CreateFolder("Npc TP")
 
 local e = w:CreateFolder("Miscellanous")
 
-b:Toggle("Auto Farm",function(bool)
+b:Toggle("Auto Level",function(bool)
     getgenv().autoFarm = bool
-    print('Auto Farm is: ', bool)
+    print('Auto Level is: ', bool)
     if bool then
         doFarm();
     end
