@@ -193,7 +193,7 @@ b:Button("Safe Place",function()
             plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
         end
     end
-    teleportTO(CFrame.new(9590.73438, 80.4513931, 752.436279, -0.1896891, 0, 0.981844187, 0, 1, 0, -0.981844187, 0, -0.1896891))
+    teleportTO(game:GetService("Workspace").Areas.Library.AreaParts.AreaPart.CFrame)
 end)
 
 c:Button("Roku's Temple",function()
